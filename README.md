@@ -1,5 +1,5 @@
 # ms-sqlserver-docker
-Configures Microsoft's SQL Server Docker image with the correct default mount bindings for data and log files.
+Configures Microsoft's SQL Server Docker image with default mount bindings that map to external drives for data and log file usage.
 
 ## Installation
 Prior to building the image and creating the container, ensure the following:
@@ -37,5 +37,5 @@ $ docker compose -f mssql-compose.yml up --build -d
 ## Etcetera
 - Validated to work in Docker Desktop v4.26.1.
 - Container runs with user `mssql` (non-root privelage) and the working directory is `/var/opt/mssql`.
-  - To enter the running container as a root user, execute the following in a terminal:
+  - To enter the running container as a `root` user, execute the following in a terminal:
     -  `$ docker exec -itu root container-name sh`
