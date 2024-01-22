@@ -1,5 +1,5 @@
 # ms-sqlserver-docker
-Configures Microsoft's SQL server docker image with the correct default mount bindings for data and log files.
+Configures Microsoft's SQL Server Docker image with the correct default mount bindings for data and log files.
 
 ## Installation
 Prior to building the image and creating the container, ensure the following:
