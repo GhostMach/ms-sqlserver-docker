@@ -39,3 +39,4 @@ $ docker compose -f mssql-compose.yml up --build -d
 - Container runs with user `mssql` (non-root privelage) and the working directory is `/var/opt/mssql`.
   - To enter the running container as a `root` user, execute the following in a terminal:
     -  `$ docker exec -itu root container-name sh`
+-  For more Microsoft recommended configuration tips, refer to their documentation link: https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-configure-mssql-conf?view=sql-server-ver15
