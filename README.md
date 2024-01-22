@@ -35,7 +35,7 @@ $ docker compose -f mssql-compose.yml up --build -d
 - Automatically sets the default locations of these directory mounts in MS SQL Server's `.conf` file when building the (Docker) image.
 
 ## Etcetera
-- Validated to work in Docker Desktop v4.26.1 on Windows 11 Professional Version 22H2 (OS Build 22621.3007)
+- Validated to work in Docker Desktop v4.26.1 on Windows 11 Professional, Version 22H2 (OS Build 22621.3007)
 - Container runs with user `mssql` (non-root privelage) and the working directory is `/var/opt/mssql`.
   - To enter the running container as a `root` user, execute the following in a terminal:
     -  `$ docker exec -itu root container-name sh`
