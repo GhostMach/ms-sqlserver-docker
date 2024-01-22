@@ -1,0 +1,31 @@
+# Authored by: Adam H. Meadvin 
+# Email: adam@medvyn.io
+# GitHub: @GhostMach 
+# Creation Date: 21 January 2024
+
+services:
+  mssql:
+    env_file:
+      - .env
+    image: ${mssql_img_name}       
+    build:
+      context: .
+      dockerfile: ms_sql.Dockerfile
+      args:
+        feature_tag: ${feature_tag_name}
+    container_name: ${mssql_container_name}
+    ports:
+      - ${port_values}
+    volumes:
+      - type: bind
+        source: ${dblog_dir}
+        target: ${mssql_path}dblog
+      - type: bind
+        source: ${dbdata_dir}
+        target: ${mssql_path}dbdata
+      - type: bind
+        source: ${data_dir}
+        target: ${mssql_path}data
+      - type: bind
+        source: ${backup_dir}
+        target: /var/backups
