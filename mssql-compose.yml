@@ -2,6 +2,7 @@
 # Email: adam@medvyn.io
 # GitHub: @GhostMach 
 # Creation Date: 21 January 2024
+# Update Date: 29 May 2024
 
 services:
   mssql:
@@ -29,3 +30,11 @@ services:
       - type: bind
         source: ${backup_dir}
         target: /var/backups
+    networks:
+      - ms-sql-network      
+networks:
+  ms-sql-network:
+    ipam:
+      config:
+        - subnet: ${subnet_range}
+    name: sql-db
